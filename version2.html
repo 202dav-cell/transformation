@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Трансформация Влияния | Управленческий профайлинг и психология власти</title>
+    <meta name="description" content="Перестань управлять процессами. Начни управлять психикой. Закрытый интенсив по чтению людей, нейтрализации саботажа и становлению неоспоримым авторитетом.">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="Трансформация Влияния | Управленческий профайлинг">
+    <meta property="og:description" content="Перестань управлять процессами. Начни управлять психикой. Узнай, как читать людей за 0,1 секунды и становиться неоспоримым авторитетом.">
+    <meta property="og:image" content="https://img.siliconflow.cn/1/0/2025-08-25/1756123456789_0.png">
+    <meta property="og:url" content="https://sila-vliyaniya.ru">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Сила Влияния">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Трансформация Влияния">
+    <meta name="twitter:description" content="Перестань управлять процессами. Начни управлять психикой.">
+    <meta name="twitter:image" content="https://img.siliconflow.cn/1/0/2025-08-25/1756123456789_0.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://img.siliconflow.cn/1/0/2025-08-25/1756123456789_1.png">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        dark: '#0B0F19',
+                        darker: '#060911',
+                        gold: '#D4AF37',
+                        goldHover: '#F59E0B',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0B0F19;
+            color: #E2E8F0;
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #D4AF37 0%, #F59E0B 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero-bg {
+            background: radial-gradient(circle at 50% 0%, rgba(212, 175, 55, 0.12) 0%, rgba(11, 15, 25, 1) 60%);
+        }
+        .pulse-btn {
+            animation: pulse-gold 2s infinite;
+        }
+        @keyframes pulse-gold {
+            0% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.4); }
+            70% { box-shadow: 0 0 0 15px rgba(212, 175, 55, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .accordion-icon {
+            transition: transform 0.3s ease;
+        }
+        .accordion-active .accordion-icon {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- HEADER -->
+    <header class="fixed w-full top-0 z-50 bg-dark/90 backdrop-blur-md border-b border-gray-800">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold tracking-wider text-white flex items-center gap-2">
+                <img src="https://img.siliconflow.cn/1/0/2025-08-25/1756123456789_1.png" alt="Logo" class="w-8 h-8">
+                СИЛА <span class="text-gold">ВЛИЯНИЯ</span>
+            </a>
+            <a href="#pricing" class="hidden sm:inline-block bg-gold hover:bg-goldHover text-dark font-bold py-2 px-5 rounded-lg transition duration-300 text-sm">
+                Начать трансформацию
+            </a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero-bg min-h-screen flex items-center pt-24 pb-16">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-gold font-semibold tracking-widest uppercase text-sm mb-4">Закрытый интенсив по управленческому профайлингу</p>
+            <h1 class="font-serif text-3xl sm:text-4xl md:text-6xl lg:text-8xl font-black text-white leading-tight mb-6 px-2">
+    ТРАНСФОРМАЦИЯ <br>
+    <span class="gradient-text">ВЛИЯНИЯ</span>
+</h1>
+            <p class="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto mb-10 leading-relaxed">
+                Перестань управлять процессами. Начни управлять психикой. <br class="hidden md:block">
+                Как читать людей за 0,1 секунды, нейтрализовать саботаж и стать лидером, за которым идут в огонь и в воду.
+            </p>
+            
+            <!-- COUNTDOWN TIMER -->
+            <div class="bg-darker border border-gold/30 rounded-2xl p-6 max-w-2xl mx-auto mb-10">
+                <p class="text-red-500 font-bold text-sm tracking-widest uppercase mb-4">⚠ До конца акции осталось:</p>
+                <div id="countdown" class="flex justify-center gap-4 md:gap-8 text-white">
+                    <div class="text-center">
+                        <div id="days" class="font-serif text-4xl md:text-5xl font-bold text-gold">00</div>
+                        <div class="text-xs text-gray-500 mt-1 uppercase">Дней</div>
+                    </div>
+                    <div class="text-4xl md:text-5xl font-bold text-gray-700">:</div>
+                    <div class="text-center">
+                        <div id="hours" class="font-serif text-4xl md:text-5xl font-bold text-gold">00</div>
+                        <div class="text-xs text-gray-500 mt-1 uppercase">Часов</div>
+                    </div>
+                    <div class="text-4xl md:text-5xl font-bold text-gray-700">:</div>
+                    <div class="text-center">
+                        <div id="minutes" class="font-serif text-4xl md:text-5xl font-bold text-gold">00</div>
+                        <div class="text-xs text-gray-500 mt-1 uppercase">Минут</div>
+                    </div>
+                    <div class="text-4xl md:text-5xl font-bold text-gray-700">:</div>
+                    <div class="text-center">
+                        <div id="seconds" class="font-serif text-4xl md:text-5xl font-bold text-gold">00</div>
+                        <div class="text-xs text-gray-500 mt-1 uppercase">Секунд</div>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#pricing" class="inline-block bg-gold hover:bg-goldHover text-dark font-bold py-4 px-12 rounded-xl text-lg transition duration-300 shadow-lg shadow-gold/20 hover:shadow-gold/40 pulse-btn">
+                Начать трансформацию
+            </a>
+            <p class="text-gray-500 text-sm mt-6">⏱ Доступ сразу после оплаты</p>
+        </div>
+    </section>
+
+    <!-- PAIN POINTS -->
+    <section class="py-20 bg-darker">
+        <div class="container mx-auto px-4">
+            <h2 class="font-serif text-3xl md:text-5xl font-bold text-white text-center mb-12">Ты чувствуешь это каждый день, но не можешь найти причину:</h2>
+            <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                <div class="bg-dark p-6 rounded-xl border border-gray-800">
+                    <p class="text-gray-300">Ты нанимаешь «звезду», а получаешь токсичного нарцисса, который через месяц разрушает отдел.</p>
+                </div>
+                <div class="bg-dark p-6 rounded-xl border border-gray-800">
+                    <p class="text-gray-300">Ты пытаешься быть «демократичным лидером», а в итоге коллектив садится тебе на шею, а результаты падают.</p>
+                </div>
+                <div class="bg-dark p-6 rounded-xl border border-gray-800">
+                    <p class="text-gray-300">Придя на новую должность, ты столкнулся со стеной. Коллектив вежливо кивает, но тихо саботирует решения.</p>
+                </div>
+                <div class="bg-dark p-6 rounded-xl border border-gray-800">
+                    <p class="text-gray-300">Ты выгорел. Ты работаешь за себя и за тех, кто «не может принять решение без тебя».</p>
+                </div>
+            </div>
+            <p class="text-center text-gold font-semibold text-xl mt-12 max-w-3xl mx-auto">
+                Проблема не в команде. Проблема в том, что ты управляешь <span class="underline decoration-gold">процессами</span>, игнорируя <span class="underline decoration-gold">психотипы</span>.
+            </p>
+        </div>
+    </section>
+
+    <!-- WHAT IS THE COURSE -->
+    <section class="py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="font-serif text-3xl md:text-5xl font-bold text-white text-center mb-6">Что такое «Трансформация Влияния»?</h2>
+            <p class="text-lg text-gray-400 text-center max-w-4xl mx-auto mb-16">
+                Это не набор скучных лекций по менеджменту. Это жесткая, прикладная система перепрошивки вашего управленческого мышления. Мы разбираем бизнес через призму клинической психологии, эволюции и нейрофизиологии.
+            </p>
+
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <div class="bg-dark p-8 rounded-2xl border border-gray-800 hover:border-gold transition duration-300">
+                    <div class="text-gold text-4xl mb-4">01</div>
+                    <h3 class="text-white font-bold text-xl mb-3">Анатомия 8 Психотипов</h3>
+                    <p class="text-gray-400">Ты научишься мгновенно считывать Циклоидов, Шизоидов, Параноялов, Эпилептоидов, Истероидов, Тревожников, Конформных и Антисоциальных типов. Ты будешь знать, кому дать свободу, а кого взять в ежовые рукавицы.</p>
+                </div>
+                <div class="bg-dark p-8 rounded-2xl border border-gray-800 hover:border-gold transition duration-300">
+                    <div class="text-gold text-4xl mb-4">02</div>
+                    <h3 class="text-white font-bold text-xl mb-3">Риторика и Невербалика</h3>
+                    <p class="text-gray-400">Как звучать так, чтобы вам невозможно было возразить. Грудной регистр, «королевские паузы», жесты-иллюстраторы. Как считывать ложь и скрытый саботаж за 0,1 секунды по микровыражениям лица.</p>
+                </div>
+                <div class="bg-dark p-8 rounded-2xl border border-gray-800 hover:border-gold transition duration-300">
+                    <div class="text-gold text-4xl mb-4">03</div>
+                    <h3 class="text-white font-bold text-xl mb-3">Точка Инициации</h3>
+                    <p class="text-gray-400">Пошаговый алгоритм входа в новый коллектив. Как провести аудит, устранить «быструю боль» и экологично нейтрализовать старого неформального лидера («серого кардинала»), не спровоцировав бунт.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW SECTION: ДЛЯ КОГО -->
+    <section class="py-20 bg-darker">
+        <div class="container mx-auto px-4">
+            <h2 class="font-serif text-3xl md:text-5xl font-bold text-white text-center mb-12">Для кого разработан этот продукт?</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+                <div class="bg-dark p-6 rounded-xl border-l-4 border-gold">
+                    <h3 class="text-white font-bold text-lg mb-2">Собственники и CEOs</h3>
+                    <p class="text-gray-400 text-sm">Которые устали быть «самыми умными» в компании и хотят выстроить систему, работающую без их ежеминутного контроля.</p>
+                </div>
+                <div class="bg-dark p-6 rounded-xl border-l-4 border-gold">
+                    <h3 class="text-white font-bold text-lg mb-2">ТОП-менеджеры и Директора</h3>
+                    <p class="text-gray-400 text-sm">Которым нужно быстро влиться в новый коллектив, нейтрализовать скрытый саботаж и доказать свой авторитет за 30 дней.</p>
+                </div>
+                <div class="bg-dark p-6 rounded-xl border-l-4 border-gold">
+                    <h3 class="text-white font-bold text-lg mb-2">Руководители отделов</h3>
+                    <p class="text-gray-400 text-sm">Которые столкнулись с выгоранием, потому что тащат на себе работу всей команды и не умеют делегировать.</p>
+                </div>
+                <div class="bg-dark p-6 rounded-xl border-l-4 border-gold">
+                    <h3 class="text-white font-bold text-lg mb-2">HR-директора и Рекрутеры</h3>
+                    <p class="text-gray-400 text-sm">Которые хотят перестать нанимать «токсичных звезд» и научатся видеть истинные мотивы кандидатов за 15 минут.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW SECTION: БОГОТВОРИТЬ РЕШЕНИЯ -->
+    <section class="py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="font-serif text-3xl md:text-5xl font-bold text-white text-center mb-12">Почему твоя команда начнет боготворить твои решения?</h2>
+            <div class="max-w-4xl mx-auto space-y-8">
+                <div class="flex gap-6 items-start">
+                    <div class="text-gold font-serif text-5xl font-bold shrink-0">01</div>
+                    <div>
+                        <h3 class="text-white font-bold text-xl mb-2">Ты перестаешь быть «надзирателем»</h3>
+                        <p class="text-gray-400">Ты больше не дергаешь людей по мелочам. Ты даешь автономность там, где она нужна, и жесткий контроль там, где он спасает бизнес. Команда чувствует это и выдыхает.</p>
+                    </div>
+                </div>
+                <div class="flex gap-6 items-start">
+                    <div class="text-gold font-serif text-5xl font-bold shrink-0">02</div>
+                    <div>
+                        <h3 class="text-white font-bold text-xl mb-2">Ты говоришь на их языке</h3>
+                        <p class="text-gray-400">Ты больше не требуешь от Шизоида «душевности», а от Истероида — «тихой работы». Ты даешь каждому именно ту мотивацию, которая включает его на 100%. Это вызывает шок и глубокое уважение.</p>
+                    </div>
+                </div>
+                <div class="flex gap-6 items-start">
+                    <div class="text-gold font-serif text-5xl font-bold shrink-0">03</div>
+                    <div>
+                        <h3 class="text-white font-bold text-xl mb-2">Ты защищаешь их периметр</h3>
+                        <p class="text-gray-400">Ты учишься брать удары сверху и извне на себя. Когда команда видит, что их лидер — это «каменная стена», они готовы работать на него в три смены.</p>
+                    </div>
+                </div>
+                <div class="flex gap-6 items-start">
+                    <div class="text-gold font-serif text-5xl font-bold shrink-0">04</div>
+                    <div>
+                        <h3 class="text-white font-bold text-xl mb-2">Ты принимаешь решения хладнокровно</h3>
+                        <p class="text-gray-400">В кризис, когда все паникуют, ты включаешь «королевское спокойствие». Люди инстинктивно тянутся к тому, кто не теряет голову. Твой авторитет становится неоспоримым.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MOTIVATION BLOCK -->
+    <section class="py-20 bg-darker">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="font-serif text-3xl md:text-5xl font-bold text-white mb-8">Цена твоего бездействия</h2>
+            <p class="text-lg text-gray-400 max-w-3xl mx-auto mb-12 leading-relaxed">
+                Каждый день, когда ты нанимаешь «не тех», мотивируешь «не так» и пытаешься договориться с теми, с кем договариваться бесполезно — <span class="text-gold font-bold">ты теряешь деньги, время и нервную систему</span>. 
+                <br><br>
+                Ты выгораешь, потому что играешь по чужим правилам. Ты пытаешься быть удобным, когда от тебя ждут силы. 
+                <br><br>
+                Этот курс — точка невозврата. Либо ты становишься Вожаком, который читает людей как открытую книгу. Либо остаешься функцией, которую можно заменить. 
+                <br><br>
+                <span class="text-white font-bold text-xl">Выбор за тобой. Но помни: время работает против тебя.</span>
+            </p>
+            <a href="#pricing" class="inline-block border-2 border-gold text-gold hover:bg-gold hover:text-dark font-bold py-3 px-8 rounded-lg transition duration-300">
+                Забрать свой авторитет
+            </a>
+        </div>
+    </section>
+
+    <!-- RESTORED SECTION: ЖЕСТКИЙ ФИЛЬТР -->
+    <section class="py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="font-serif text-3xl md:text-5xl font-bold text-white text-center mb-12">Жесткий фильтр на вход</h2>
+            <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <div class="bg-green-900/10 border border-green-800/50 p-8 rounded-2xl">
+                    <h3 class="text-green-400 font-bold text-2xl mb-6">✅ ВАМ СЮДА, ЕСЛИ:</h3>
+                    <ul class="space-y-4 text-gray-300">
+                        <li class="flex items-start gap-3"><span class="text-green-400 mt-1">•</span> Вы собственник или руководитель, который уперся в «человеческий фактор».</li>
+                        <li class="flex items-start gap-3"><span class="text-green-400 mt-1">•</span> Вы готовитесь к сложным переговорам, найму ТОПов или вхождению в новый коллектив.</li>
+                        <li class="flex items-start gap-3"><span class="text-green-400 mt-1">•</span> Вы хотите перестать быть «удобным» и стать неоспоримым авторитетом.</li>
+                        <li class="flex items-start gap-3"><span class="text-green-400 mt-1">•</span> Вы готовы применять жесткие, но справедливые инструменты управления.</li>
+                    </ul>
+                </div>
+                <div class="bg-red-900/10 border border-red-800/50 p-8 rounded-2xl">
+                    <h3 class="text-red-400 font-bold text-2xl mb-6">❌ ВАМ НЕ СЮДА, ЕСЛИ:</h3>
+                    <ul class="space-y-4 text-gray-300">
+                        <li class="flex items-start gap-3"><span class="text-red-400 mt-1">•</span> Вы верите в «успешный успех», мотивационные кричалки и тимбилдинги с прыжками через костер.</li>
+                        <li class="flex items-start gap-3"><span class="text-red-400 mt-1">•</span> Вы линейный специалист, который хочет просто «получить повышение».</li>
+                        <li class="flex items-start gap-3"><span class="text-red-400 mt-1">•</span> Вы не готовы брать на себя жесткую ответственность за судьбу коллектива.</li>
+                        <li class="flex items-start gap-3"><span class="text-red-400 mt-1">•</span> Вы ищете «волшебную таблетку», чтобы люди начали работать сами, без вашей системы.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRICING -->
+    <section id="pricing" class="py-20 bg-darker">
+        <div class="container mx-auto px-4">
+            <h2 class="font-serif text-3xl md:text-5xl font-bold text-white text-center mb-4">Единый формат доступа</h2>
+            <p class="text-gray-400 text-center mb-12 text-lg">Инвестиция в твой неоспоримый авторитет</p>
+            
+            <div class="max-w-2xl mx-auto">
+                <div class="bg-dark p-8 md:p-12 rounded-3xl border-2 border-gold relative flex flex-col shadow-2xl shadow-gold/10">
+                    <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-gold text-dark text-xs font-bold px-6 py-2 rounded-full uppercase tracking-wider">
+                        Специальная цена
+                    </div>
+                    <h3 class="text-gold font-bold text-3xl mb-2 text-center">Трансформация Влияния</h3>
+                    <p class="text-gray-400 mb-8 text-center">Полный доступ к системе управленческого профайлинга</p>
+                    
+                    <div class="mb-8 text-center">
+                        <span class="text-6xl md:text-7xl font-black text-white">6500</span>
+                        <span class="text-4xl text-gold font-bold ml-2">₽</span>
+                    </div>
+                    
+                    <ul class="space-y-4 mb-10 text-gray-200 text-base md:text-lg">
+                        <li class="flex items-start gap-3"><span class="text-gold mt-1">✓</span> Глубокий разбор 8 психотипов и скрипты управления каждым из них</li>
+                        <li class="flex items-start gap-3"><span class="text-gold mt-1">✓</span> Техники невербального считывания и верификации лжи</li>
+                        <li class="flex items-start gap-3"><span class="text-gold mt-1">✓</span> Алгоритмы нейтрализации саботажа и «серых кардиналов»</li>
+                        <li class="flex items-start gap-3"><span class="text-gold mt-1">✓</span> Постановка голоса и «королевская» риторика</li>
+                        <li class="flex items-start gap-3"><span class="text-gold mt-1">✓</span> Стратегия первых 30 дней нового руководителя</li>
+                    </ul>
+                    
+                    <a href="payment.html" class="block text-center bg-gold hover:bg-goldHover text-dark font-bold py-4 px-6 rounded-xl text-xl transition shadow-lg shadow-gold/20 pulse-btn">
+                        Начать трансформацию
+                    </a>
+                    <p class="text-center text-gray-500 text-sm mt-4">Оплата безопасна. Доступ открывается мгновенно.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPANDED FAQ -->
+    <section class="py-20">
+        <div class="container mx-auto px-4 max-w-3xl">
+            <h2 class="font-serif text-3xl md:text-4xl font-bold text-white text-center mb-12">Частые вопросы</h2>
+            
+            <div class="space-y-4" id="faq-accordion">
+                <div class="bg-dark border border-gray-800 rounded-xl overflow-hidden">
+                    <button class="accordion-btn w-full text-left p-6 flex justify-between items-center text-white font-semibold text-lg hover:text-gold transition">
+                        <span>Я не психолог, смогу ли я применять профайлинг?</span>
+                        <svg class="accordion-icon w-5 h-5 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="accordion-content px-6 pb-6 text-gray-400">
+                        Профайлинг в бизнесе — это не магия и не клиническая диагностика. Это набор паттернов (речь, одежда, мимика, реакция на стресс), которые вы начнете замечать уже в первый день. Вы получите готовые чек-листы и алгоритмы.
+                    </div>
+                </div>
+                <div class="bg-dark border border-gray-800 rounded-xl overflow-hidden">
+                    <button class="accordion-btn w-full text-left p-6 flex justify-between items-center text-white font-semibold text-lg hover:text-gold transition">
+                        <span>Это поможет, если в подчинении люди старше и опытнее меня?</span>
+                        <svg class="accordion-icon w-5 h-5 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="accordion-content px-6 pb-6 text-gray-400">
+                        Возраст не имеет значения. Имеет значение иерархия и доминирование. Мы детально разбираем, как «обезвредить» старого неформального лидера и перевести его на свою сторону или уволить без бунта коллектива.
+                    </div>
+                </div>
+                <div class="bg-dark border border-gray-800 rounded-xl overflow-hidden">
+                    <button class="accordion-btn w-full text-left p-6 flex justify-between items-center text-white font-semibold text-lg hover:text-gold transition">
+                        <span>Как быстро я увижу результат?</span>
+                        <svg class="accordion-icon w-5 h-5 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="accordion-content px-6 pb-6 text-gray-400">
+                        Эффект «Вау» от считывания психотипов и изменения тональности вы получите в первую неделю. Системная трансформация вашей команды займет 30-60 дней после внедрения регламентов под психотипы.
+                    </div>
+                </div>
+                <div class="bg-dark border border-gray-800 rounded-xl overflow-hidden">
+                    <button class="accordion-btn w-full text-left p-6 flex justify-between items-center text-white font-semibold text-lg hover:text-gold transition">
+                        <span>Это просто еще один курс по MBTI и типологиям?</span>
+                        <svg class="accordion-icon w-5 h-5 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="accordion-content px-6 pb-6 text-gray-400">
+                        Нет. MBTI — это про то, как люди «любят думать». Наш курс основан на клинической психиатрии (акцентуации по Леонгарду-Личко) и эволюционной биологии. Мы учим не «тестировать» людей, а считывать их в реальной жизни по микровыражениям, речи и поведению в стрессе.
+                    </div>
+                </div>
+                <div class="bg-dark border border-gray-800 rounded-xl overflow-hidden">
+                    <button class="accordion-btn w-full text-left p-6 flex justify-between items-center text-white font-semibold text-lg hover:text-gold transition">
+                        <span>Я женщина-руководитель в мужском коллективе. Это сработает для меня?</span>
+                        <svg class="accordion-icon w-5 h-5 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="accordion-content px-6 pb-6 text-gray-400">
+                        Абсолютно. В курсе есть отдельный мощный блок про «Голос Матриарха» и невербалику. Мы разбираем, как женщинам использовать природный низкий регистр и «королевские паузы», чтобы стирать гендерные предвзятости и заставлять мужчин-подчиненных подсознательно уважать ваш статус.
+                    </div>
+                </div>
+                <div class="bg-dark border border-gray-800 rounded-xl overflow-hidden">
+                    <button class="accordion-btn w-full text-left p-6 flex justify-between items-center text-white font-semibold text-lg hover:text-gold transition">
+                        <span>У меня удаленная команда. Как применять профайлинг онлайн?</span>
+                        <svg class="accordion-icon w-5 h-5 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="accordion-content px-6 pb-6 text-gray-400">
+                        Цифровой профайлинг даже проще. Вы считываете психотип по тому, как человек пишет письма (структура, пунктуация, эмодзи), как ведет себя на Zoom (фон, одежда, куда смотрит) и как реагирует на задержки в чате. Скрипты для удаленки включены.
+                    </div>
+                </div>
+                <div class="bg-dark border border-gray-800 rounded-xl overflow-hidden">
+                    <button class="accordion-btn w-full text-left p-6 flex justify-between items-center text-white font-semibold text-lg hover:text-gold transition">
+                        <span>На сколько времени дается доступ к материалам?</span>
+                        <svg class="accordion-icon w-5 h-5 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="accordion-content px-6 pb-6 text-gray-400">
+                        Доступ к платформе бессрочный (Lifetime). Вы можете пересматривать модули перед сложными переговорами, наймом или увольнением столько раз, сколько потребуется.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-12 border-t border-gray-800 bg-darker">
+        <div class="container mx-auto px-4 text-center">
+            <a href="#" class="text-2xl font-bold tracking-wider text-white mb-4 inline-block flex items-center justify-center gap-2">
+                <img src="https://img.siliconflow.cn/1/0/2025-08-25/1756123456789_1.png" alt="Logo" class="w-8 h-8">
+                СИЛА <span class="text-gold">ВЛИЯНИЯ</span>
+            </a>
+            <p class="text-gray-500 text-sm mb-6">sila-vliyaniya.ru</p>
+            <div class="flex justify-center gap-6 text-sm text-gray-400 mb-8">
+                <a href="#" class="hover:text-gold transition">Политика конфиденциальности</a>
+                <a href="#" class="hover:text-gold transition">Оферта</a>
+                <a href="#" class="hover:text-gold transition">Контакты</a>
+            </div>
+            <p class="text-gray-600 text-xs italic max-w-2xl mx-auto mb-6">
+                «Управленческий авторитет не выдается вместе с креслом. Он зарабатывается каждый день».
+            </p>
+            <p class="text-gray-500 text-xs">
+                © <span id="current-year">2026</span> Проект «Трансформация влияния». Все права защищены.
+            </p>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script>
+        // Dynamic Year
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // FAQ Accordion
+        document.querySelectorAll('.accordion-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                const icon = button.querySelector('.accordion-icon');
+                
+                document.querySelectorAll('.accordion-content').forEach(item => {
+                    if (item !== content) {
+                        item.style.maxHeight = null;
+                        item.parentElement.classList.remove('accordion-active');
+                    }
+                });
+
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                    button.parentElement.classList.remove('accordion-active');
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                    button.parentElement.classList.add('accordion-active');
+                }
+            });
+        });
+
+        // COUNTDOWN TIMER LOGIC
+        function startCountdown() {
+            const STORAGE_KEY = 'promo_deadline';
+            let deadline = localStorage.getItem(STORAGE_KEY);
+
+            if (!deadline) {
+                const now = new Date().getTime();
+                const threeDays = 72 * 60 * 60 * 1000; 
+                deadline = now + threeDays;
+                localStorage.setItem(STORAGE_KEY, deadline);
+            } else {
+                deadline = parseInt(deadline);
+            }
+
+            const daysEl = document.getElementById('days');
+            const hoursEl = document.getElementById('hours');
+            const minutesEl = document.getElementById('minutes');
+            const secondsEl = document.getElementById('seconds');
+
+            const timer = setInterval(function() {
+                const now = new Date().getTime();
+                const distance = deadline - now;
+
+                if (distance < 0) {
+                    clearInterval(timer);
+                    localStorage.removeItem(STORAGE_KEY);
+                    startCountdown();
+                    return;
+                }
+
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                daysEl.innerText = days < 10 ? '0' + days : days;
+                hoursEl.innerText = hours < 10 ? '0' + hours : hours;
+                minutesEl.innerText = minutes < 10 ? '0' + minutes : minutes;
+                secondsEl.innerText = seconds < 10 ? '0' + seconds : seconds;
+            }, 1000);
+        }
+
+        startCountdown();
+    </script>
+</body>
+</html>
